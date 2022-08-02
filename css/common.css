@@ -22,3 +22,13 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.galery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galery-img {
+display: block;
+}
