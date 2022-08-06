@@ -7,7 +7,6 @@ console.log('Number of categories:', listEl.length);
 const titleEl = document.querySelectorAll('h2');
 
 
-
 const allListEl = document.querySelectorAll('ul')
 
 const firstItemEl = allListEl[1].children;
@@ -23,3 +22,4 @@ console.log('Elements:',secondItemEl.length);
 
 console.log('Category:', titleEl[2].textContent);
 console.log('Elements:',thirdItemEl.length);
+

@@ -22,7 +22,7 @@ const makeGalery = ({url, alt}) => {
 
   return `
   <li class="galery-item">
-  <img src="${url}" alt="${alt}" class="galery-img">
+  <img src="${url}" alt="${alt}" class="galery-img width="450px" height="300px">
   </li>
   `
 }

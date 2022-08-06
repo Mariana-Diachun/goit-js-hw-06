@@ -16,7 +16,8 @@ const itemElements = ingredients.map(index => {
   itemEl.classList.add('item');
   itemEl.textContent = index;
   return itemEl;
-})
+});
+
 console.log(itemElements);
 
 ingredientContainer.append(...itemElements);
