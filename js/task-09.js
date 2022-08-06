@@ -3,17 +3,20 @@ function getRandomHexColor() {
 }
 
 const buttonEl = document.querySelector('.change-color');
-console.log(buttonEl);
+// console.log(buttonEl);
 
 const spanEl = document.querySelector('.color');
-console.log(spanEl);
+// console.log(spanEl);
 
 const body = document.querySelector('body');
-console.log(body);
+// console.log(body);
 
 buttonEl.addEventListener('click', onButtonEl);
 
 function onButtonEl(event) {
-  spanEl.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+  event.preventDefault();
+  const randomColorEl = getRandomHexColor();
+  spanEl.textContent = randomColorEl;
+  body.style.backgroundColor = randomColorEl;
+
 }
