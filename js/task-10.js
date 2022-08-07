@@ -27,8 +27,10 @@ elements.buttonCreate.addEventListener('click', createBoxes);
 
 let quantity = 30;
 
-function createBoxes(amount) {
+function createBoxes() {
   let boxArray = [];
+  let amount = elements.input.value;
+
 
   for (let i = 0; i < amount; i += 1) {
     let color = getRandomHexColor();
@@ -39,10 +41,12 @@ function createBoxes(amount) {
     console.log(boxArray);
   }
 
-  elements.container.insertAdjacentHTML("beforeend",...boxArray);
-  // console.log(box);
+  elements.container.insertAdjacentHTML("beforeend",boxArray.join(""));
 }
 
-createBoxes(3);
+elements.buttonDestroy.addEventListener('click', destroyBoxes);
 
-
+function destroyBoxes() {
+elements.container.innerHTML = '';
+quantity = 30;
+}
