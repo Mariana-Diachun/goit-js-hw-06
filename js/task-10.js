@@ -25,13 +25,24 @@ const elements = {
 
 elements.buttonCreate.addEventListener('click', createBoxes);
 
+let quantity = 30;
 
 function createBoxes(amount) {
-  let box = `<div style = "width: ${quantity}px; height: ${quantity}px; background-color: ${color};"></div>`;
+  let boxArray = [];
+
+  for (let i = 0; i < amount; i += 1) {
+    let color = getRandomHexColor();
+    
+    let box = `<div style = "width: ${quantity}px; height: ${quantity}px; background-color: ${color};"></div>`;
+    quantity += 10;
+    boxArray.push(box);
+    console.log(boxArray);
+  }
+
+  elements.container.insertAdjacentHTML("beforeend",...boxArray);
   // console.log(box);
-  color = getRandomHexColor();
 }
 
-console.log(createBoxes())
+createBoxes(3);
 
 
