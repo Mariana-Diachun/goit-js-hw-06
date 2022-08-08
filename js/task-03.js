@@ -16,7 +16,6 @@ const images = [
 
 const imagesContainer = document.querySelector('.gallery');
 
-console.log(imagesContainer);
 
 const makeGalery = ({url, alt}) => {
 
@@ -27,8 +26,6 @@ const makeGalery = ({url, alt}) => {
   `
 }
 
-console.log(images);
-console.log(makeGalery(images[0]));
 
 
 const makeImgGalery = images
@@ -36,6 +33,5 @@ const makeImgGalery = images
   .join(' ');
 
 
-console.log(makeImgGalery);
 
 imagesContainer.insertAdjacentHTML('beforeend', makeImgGalery);
